@@ -1,5 +1,4 @@
 application:
-  name: custom-core
   path:
     file-storage: C:\Users\SONANH\Documents\Image
 
