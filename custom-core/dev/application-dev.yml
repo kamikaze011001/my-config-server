@@ -1,0 +1,35 @@
+application:
+  name: custom-core
+  path:
+    file-storage: C:\Users\SONANH\Documents\Image
+
+jwt:
+  access-token:
+    secret-key: HollowKnight
+    life-time: 3600000
+  refresh-token:
+    secret-key: DarkSoul
+    life-time: 6000000
+
+
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 200MB
+      file-size-threshold: 2KB
+      max-request-size: 215MB
+
+  liquibase:
+    change-log: classpath:/migration/master-changelog.xml
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/demo-authen
+    username: backend-03
+    password: backend03@2022
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  cache:
+    type: redis
